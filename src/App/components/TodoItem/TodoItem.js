@@ -28,14 +28,14 @@ export default function TodoItem({ todo, deleteTodo, editTodo }) {
       <Paper style={{ padding: "0.5em 0em" }}>
         <ListItem
           secondaryAction={
-            <IconButton edge="end" aria-label="comments">
-              <div style={{ padding: "0.5em 0.5em" }}>
+            <>
+              <IconButton edge="start" aria-label="edit">
                 <EditIcon onClick={() => setOpenDialog(true)} />
-              </div>
-              <div style={{ padding: "0.5em 0.5em" }}>
+              </IconButton>
+              <IconButton edge="end" aria-label="delete">
                 <DeleteIcon onClick={() => deleteTodo(todo.id)} />
-              </div>
-            </IconButton>
+              </IconButton>
+            </>
           }
           disablePadding
         >
