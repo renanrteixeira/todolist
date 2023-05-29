@@ -30,7 +30,11 @@ export default function TodoItem({ todo, deleteTodo, editTodo }) {
           secondaryAction={
             <>
               <IconButton edge="start" aria-label="edit">
-                <EditIcon onClick={() => setOpenDialog(true)} />
+                <EditIcon
+                  onClick={() => {
+                    setOpenDialog(true);
+                  }}
+                />
               </IconButton>
               <IconButton edge="end" aria-label="delete">
                 <DeleteIcon onClick={() => deleteTodo(todo.id)} />

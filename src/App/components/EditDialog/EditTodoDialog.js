@@ -29,15 +29,6 @@ export default function EditTodoDialog({
     editTodo(todo.id, editedText);
     dialogHandler();
   };
-  // const [open, setOpen] = React.useState(false);
-
-  // const handleClickOpen = () => {
-  //   setOpen(true);
-  // };
-
-  // const handleClose = () => {
-  //   setOpen(false);
-  // };
 
   return (
     <Dialog
@@ -51,7 +42,7 @@ export default function EditTodoDialog({
       <DialogContent>
         <TextField
           fullWidth
-          defaultValue={editedText}
+          value={editedText}
           onChange={(e) => setEditedText(e.target.value)}
         />
       </DialogContent>
