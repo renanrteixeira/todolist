@@ -23,7 +23,7 @@ export default function EditTodoDialog({
   editTodo,
   todo,
 }) {
-  const [editedText, setEditedText] = useState(null);
+  const [editedText, setEditedText] = useState(todo.text);
 
   const textHandler = () => {
     editTodo(todo.id, editedText);
