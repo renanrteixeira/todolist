@@ -23,7 +23,7 @@ export default function EditTodoDialog({
   editTodo,
   todo,
 }) {
-  const [editedText, setEditedText] = useState(todo.text);
+  const [editedText, setEditedText] = useState(null);
 
   const textHandler = () => {
     editTodo(todo.id, editedText);
@@ -42,7 +42,7 @@ export default function EditTodoDialog({
       <DialogContent>
         <TextField
           fullWidth
-          value={editedText}
+          value={todo.text}
           onChange={(e) => setEditedText(e.target.value)}
         />
       </DialogContent>
